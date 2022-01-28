@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+        integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Weather App</title>
 </head>
+
 <body>
-    
+    <h1>Welcome, to your own Weather App <i class="fas fa-sun"></i></h1>
+    <div class="weather">
+        <div class="weather_Search">
+            <input type="text" class="weather_Search_inp" placeholder="Search..." />
+            <button class="weather_Search_btn"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="weather_Place">Place:- London</div>
+        <div class="weather_Temperature">9.82°C</div>
+        <img src="#" alt="img" class="weather_Img">
+        <div class="weather_Description">Broken Clouds</div>
+        <div class="weather_wind">Wind:- 44 kmph</div>
+        <div class="weather_precipitation">Precipitation: 2%</div>
+        <hr>
+        <h3>Want to know more about London 😉</h3>
+        <div class="weather_MinMaxSearch">
+            <input class="weather_MinMaxInp" placeholder="Search..." />
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <h4>Warmest Day</h4>
+        <div class="weather_MinMaxTemp">27°C</div>
+    </div>
+    <h2>Your Past Preferences... </h2>
+    <div class="past_weather">
+        <div class="pastWeather_Place">Pune</div>
+        <div class="pastWeather_Warm">Warmest Day:- 29°C</div>
+        <div class="pastWeather_Cold">Coldest Day:- 6°C</div>
+    </div>
 </body>
 <script src="script.js"></script>
+
 </html>
