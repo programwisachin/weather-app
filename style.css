@@ -19,10 +19,13 @@ h1{
     color: white;
     font-size: 4vw;
     padding: 1em;
+    animation: fade 2s ease-in-out 1 forwards;
 }
 
 h1 > i {
     color: orange;
+    animation: grow 0.9s ease-in-out 0.2s infinite alternate;
+
 }
 .weather{
     flex: 0.6;
@@ -39,6 +42,8 @@ h1 > i {
     background: linear-gradient(hsl(206, 97%, 29%),hsl(206, 99%, 40%));
     font-size: 1.5vw;
     font-weight: 700;
+    animation: fade 2s ease-in-out 0.4s 1 forwards;
+
 }
 
 
@@ -60,6 +65,11 @@ h1 > i {
     border-radius: 100%;
     width: 4em;
     height: 4em;
+    transition: ease-in 0.2s;
+}
+
+.weather_Img{
+    animation: slide 1.1s ease-in-out 0.4s infinite alternate;
 }
 
 .weather_Description{
@@ -89,16 +99,20 @@ hr{
     border-radius: 100%;
     width: 4em;
     height: 4em;
+    transition: ease-in 0.2s;
 }
 
-.weather_Search_btn,.weather_MinMaxBtn:hover{
+.weather_Search_btn:hover,.weather_MinMaxBtn:hover{
     cursor: pointer;
+    background-color: hsl(0deg 0% 79%);
 }
 
 .past_weather{
     width: 74vw;
     height: 50vh;
     padding: 3em;
+    animation: fade 2s ease-in-out 0.4s 1 forwards;
+
 }
 
 h2{
@@ -121,11 +135,53 @@ h2{
     margin: 23px 0;
 }
 
+.past_weather_container:hover{
+    cursor: pointer;
+    animation: lift 0.7s ease-in-out  1 forwards;
+
+}
+
 .pastWeather_Warm{
     color: red;
 }
 
 .pastWeather_Cold{
     color: #0f64cf;
+}
+
+@keyframes grow {
+    from{
+        transform:scale(0.9);
+    }
+    to{
+        transform: scale(1.3);
+    }
+}
+
+@keyframes fade {
+    from{
+        opacity: 0; ;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes slide {
+    from{
+        transform:translateX(-5px) ;
+    }
+    to{
+        transform:translateX(5px) ;
+    }
+}
+
+@keyframes lift {
+    from{
+        transform:translateY(0) ;
+    }
+    to{
+        transform:translateY(-6px) ;
+    }
 }
 
