@@ -85,6 +85,7 @@ function fetchApi(city) {
             displayResponseData();
             document.querySelector(".weather_MinMaxBtn").addEventListener("click", function () {
                 isCold = document.querySelector(".weather_MinMaxInp").value;
+                document.querySelector(".weather_MinMaxInp").value = ""
                 if (isCold == "coldest") {
                     minMax(true)
                 }
@@ -102,6 +103,8 @@ document.querySelector(".weather_Search_btn").addEventListener("click", function
 
     let city = document.querySelector(".weather_Search_inp").value
     fetchApi(city)
+    document.querySelector(".weather_Search_inp").value = ""
+    
 })
 
 fetchApi("tokyo")
