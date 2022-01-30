@@ -75,6 +75,7 @@ h1 > i {
 .weather_Description{
     position: relative;
     top: -46px;
+    text-transform: capitalize;
 }
 hr{
     border: 1px solid white;
